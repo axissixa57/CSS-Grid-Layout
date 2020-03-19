@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #grid {
+        display: grid;
+
+        /* for explicist */
+        grid-template-rows: 60px 60px;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+        /* grid-auto-flow: column; */
+
+        /* for implicist */
+        /* grid-auto-rows: 60px; */
+        /* grid-auto-columns: 1fr; */
+      }
+
+      #grid > div {
+        padding: 0.5em;
+        background: gold;
+        text-align: center;
+      }
+
+      /* The grid-auto-flow property also has an optional dense keyword that can help keep your grid compact and prevent lots of gaps due to inconsistently sized grid items. */
+      /* https://www.qhmit.com/css/grid/tutorial/explicit_vs_implicit_grid.cfm */
+    </style>
+  </head>
+  <body>
+    <div id="grid">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </body>
+</html>
